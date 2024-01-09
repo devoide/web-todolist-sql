@@ -9,22 +9,24 @@
 </head>
 <body>
   <main>
+    <div class="titleCon">
+      <span class="title">
       To-Do List
+    </span>
+    </div>
     <div class="container">
+      <div id="addModal">
+        <form>
+          <span>New Item</span>
+          <div class="input">
+            <input type="text" id="inputText" placeholder="New Task" required><br>
+            <button id="done" type="submit">add</button>
+          </div>
+        </form>
+      </div>
       <div id="showList">
-        <div>
-          <button id="adder">Add</button>
-        </div>
         <div id="list">
         </div>
-      </div>
-      <div id="addModal" class="div-2b">
-        <form>
-          <span>Add Item</span>
-          <input type="text" id="inputText" placeholder="New Task" required><br>
-          <button id="done" type="submit">done</button>
-          <button id="cancel" type="button">cancel</button>
-        </form>
       </div>
     </div>
   </main>

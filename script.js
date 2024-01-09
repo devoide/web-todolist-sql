@@ -3,7 +3,8 @@ document.addEventListener("DOMContentLoaded", load_content)
 
 function load_content(){
     fetchItems()
-    document.getElementById("adder").addEventListener("click", () => adder())
+    const doneButton = document.getElementById("done");
+    doneButton.addEventListener("click", doneButtonClickHandler);
 }
 
 function fetchItems() {
@@ -46,24 +47,9 @@ function fetchItems() {
         })
         .catch(error => console.error('Error:', error));
 }
-
-function adder() {
-    document.getElementById("addModal").style.display = "block";
-    document.getElementById("inputText").focus();
-
-    const doneButton = document.getElementById("done");
-    const cancelButton = document.getElementById("cancel");
-
-    doneButton.removeEventListener("click", doneButtonClickHandler);
-    cancelButton.removeEventListener("click", cancelButtonClickHandler);
-
-    doneButton.addEventListener("click", doneButtonClickHandler);
-    cancelButton.addEventListener("click", cancelButtonClickHandler);
-}
 function doneButtonClickHandler() {
     let listItem = document.getElementById("inputText").value;
     if (listItem !== ''){
-        document.getElementById("addModal").style.display = "none";
         document.getElementById("inputText").value = '';
 
         // POST the new item to the server

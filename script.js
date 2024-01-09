@@ -3,8 +3,7 @@ document.addEventListener("DOMContentLoaded", load_content)
 
 function load_content(){
     fetchItems()
-    const doneButton = document.getElementById("done");
-    doneButton.addEventListener("click", doneButtonClickHandler);
+    document.getElementById("done").addEventListener("click", doneButtonClickHandler);
 }
 
 function fetchItems() {

@@ -24,6 +24,7 @@ function fetchItems() {
                 inp.classList.add("list_item");
                 inp.type = "checkbox";
                 lab.innerText = item.text;
+                lab.classList.add("listItem")
                 cancel.classList.add("cancelbut");
                 cancel.innerHTML = '  &times;   ';
                 div.id = 'div-' + item.text + '-' + item.id;

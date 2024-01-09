@@ -1,3 +1,7 @@
+body {
+    background-color: #363062;
+}
+
 .container {
     display: flex;
     flex-flow: column wrap;
@@ -30,9 +34,10 @@
 
 .cancelbut {
     display: none;
-    font-size: 18px;
-    font-weight: bold;
+    font-size: 1rem;
+    font-family: sans-serif;
     color: #aaa;
+    float: right;
 }
 
 div.item-div:hover .cancelbut {
@@ -52,18 +57,37 @@ div.item-div:hover .cancelbut {
     border: solid black 1px;
 }
 
-span {
-    font-weight: bold;
-    font-size: 20px;
+#inputText:focus {
+    outline: none;
 }
 
-.list_item {
-    font-size: 15px;
+.addItem, .title {
+    font-weight: bold;
+    font-size: 1.3rem;
+    color: #F5E8C7;
 }
 
 .titleCon {
     display: flex;
     justify-content: center;
+}
+
+.title {
+    font-size: 2rem;
+}
+
+#addModal {
+    background-color: #435585;
+}
+
+.listItem {
+    font-size: 1rem;
+    color: #F5E8C7;
+}
+
+.item-div {
+    border: solid white 1px;
+    padding: 10px;
 }
 
 .input {

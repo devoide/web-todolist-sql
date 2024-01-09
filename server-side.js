@@ -6,16 +6,16 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-// Create a pool for managing connections
+// pool = managing connections
 const pool = mysql.createPool({
-    connectionLimit: 10, // Maximum number of connections in pool
+    connectionLimit: 10, //max num of poolsss
     host: 'localhost',
     user: 'root',
     password: '1234',
     database: 'todolist'
 });
 
-// Create table if not exists
+// table if doesnt exist
 pool.query('CREATE TABLE IF NOT EXISTS list (id INT AUTO_INCREMENT PRIMARY KEY, text VARCHAR(255) NOT NULL, checked BOOLEAN DEFAULT false);', error => {
     if (error) throw error;
     console.log('Table created or already exists');
@@ -30,7 +30,7 @@ app.get('/items', (req, res) => {
     });
 });
 
-// posts it into sql database,
+// posts it into sql database
 app.post('/items', (req, res) => {
     const newItem = req.body;
     console.log(newItem)

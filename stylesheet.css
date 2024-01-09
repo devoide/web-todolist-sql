@@ -1,0 +1,86 @@
+.container {
+    display: flex;
+    flex-flow: row wrap;
+    border: solid black 1px;
+}
+
+.container > div {
+    width: 200px;
+    height: auto;
+    margin: 10px;
+    padding: 10px;
+    border: solid black 1px;
+    border-radius: 10px;
+}
+
+#showList {
+    background-color: lime;
+    display: flex;
+    flex-direction: column;
+}
+
+#addModal {
+    display: none;
+    background-color: limegreen;
+}
+
+#done {
+    background-color: darkslateblue;
+    color: white;
+    border: solid black 1px;
+    border-radius: 5px;
+}
+
+#done:hover {
+    background-color: dodgerblue;
+}
+
+.cancelbut {
+    display: none;
+    font-size: 18px;
+    font-weight: bold;
+    color: #aaa;
+}
+
+#adder {
+    margin-bottom: 10px;
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    padding-right: 10px;
+    padding-left: 10px;
+    border-radius: 10px;
+    border: solid white 2px;
+}
+
+#adder:hover {
+    background-color: darkslategrey;
+}
+
+#adder:focus {
+    background-color: dimgray;
+}
+
+
+div.item-div:hover .cancelbut {
+    display: inline;
+}
+
+.cancelbut:hover {
+    color: black;
+    cursor: pointer;
+}
+
+#inputText {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    height: 20px;
+}
+
+span {
+    font-weight: bold;
+    font-size: 20px;
+}
+.list_item {
+    font-size: 15px;
+}
